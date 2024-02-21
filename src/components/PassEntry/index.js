@@ -9,6 +9,7 @@ class PassEntry extends Component {
     count: 0,
     isChecked: false,
     List: [],
+    searchInput: '',
   }
 
   addClick = event => {
@@ -42,13 +43,10 @@ class PassEntry extends Component {
   }
 
   searchResults = event => {
-    const {List} = this.state
     const searchVal = event.target.value
-    const filterinput = List.filter(each =>
-      each.web.toLowerCase().includes(searchVal.toLowerCase()),
-    )
+
     this.setState({
-      List: filterinput,
+      searchInput: searchVal,
     })
   }
 
@@ -71,10 +69,13 @@ class PassEntry extends Component {
   }
 
   ListPresentView = () => {
-    const {List, isChecked} = this.state
+    const {List, searchInput, isChecked} = this.state
+    const filterinput = List.filter(each =>
+      each.web.toLowerCase().includes(searchInput.toLowerCase()),
+    )
     return (
       <ul className="items">
-        {List.map(each => (
+        {filterinput.map(each => (
           <PassWordItem
             deleteitem={this.deletePassword}
             Didchecked={isChecked}
