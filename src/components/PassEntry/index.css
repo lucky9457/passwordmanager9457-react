@@ -116,6 +116,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (width<=576px) {
+  .YoursPasswordAndSearchRow {
+    flex-direction: column;
+  }
+}
 .passCountCont {
   display: flex;
   justify-content: center;
@@ -229,7 +234,7 @@
   }
   .searchinput {
     margin-right: 5px;
-    width: 50%;
+    width: 90%;
   }
   .searchImageAndInputCont {
     justify-content: end;
