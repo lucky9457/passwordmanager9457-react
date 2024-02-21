@@ -1,0 +1,64 @@
+.item-card {
+  border: 1px solid #0ea5e9;
+  width: 32%;
+
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  list-style: none;
+}
+@media (width<=576px) {
+  .item-card {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+.totalCardFlex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.deleteIcon {
+  height: 30px;
+}
+.ProfileCont {
+  height: 70px;
+  background-color: #10b981;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 70px;
+  margin-right: 10px;
+}
+.ProfileAlpha {
+  font-family: Roboto;
+  font-size: 30px;
+  color: white;
+}
+.passPara {
+  font-family: Roboto;
+  font-size: 14px;
+  color: white;
+}
+.userPara {
+  font-family: Roboto;
+  font-size: 14px;
+  color: white;
+}
+.webPara {
+  font-family: Roboto;
+  font-size: 14px;
+  color: white;
+}
+.btnn {
+  background: none;
+  border: none;
+}
+.starsclass {
+  height: 10px;
+  transition: 2s ease;
+}
